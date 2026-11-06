@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.toolutility" name="Tool Utility Repo" version="1.0.0" provider-name="Anubis101xy">
+  <extension point="xbmc.addon.repository" name="Tool Utility Repo">
+    <dir>
+      <info compressed="false">https://anubis101xy.github.io/tool-utility--repo/zips/addons.xml</info>
+      <checksum>https://anubis101xy.github.io/tool-utility--repo/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://anubis101xy.github.io/tool-utility--repo/zips/</datadir>
+      <hashes>false</hashes>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Tool Utility Repo - TorUtilityBox and friends</summary>
+    <description lang="en_GB">Install and auto-update TorUtilityBox, TorBox and other add-ons by Anubis101xy.</description>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

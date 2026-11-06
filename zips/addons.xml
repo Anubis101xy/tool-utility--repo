@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.torbox" name="TorBox" version="1.22.1" provider-name="Anubis101xy">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="script.module.cocoscrapers" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Stream your TorBox cloud (torrents, usenet, web downloads) in Kodi</summary>
+    <description lang="en_GB">Browse and play files from your TorBox account. Supports torrents, usenet and web downloads, adding magnets, deleting items, instant-cache checks, and optional Prowlarr/Jackett search. Requires a TorBox account and API key from torbox.app/settings.</description>
+    <disclaimer lang="en_GB">Unofficial add-on. Requires your own TorBox account. You are responsible for the content you access.</disclaimer>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.torutilitybox" name="TorUtilityBox" version="1.14.1" provider-name="Anubis101xy">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="script.module.cocoscrapers" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video audio</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Movies, TV, anime, K-dramas and music from your TorBox cloud</summary>
+    <description lang="en_GB">Browse and play movies, TV shows, anime (dub/sub), K-dramas and music through your TorBox account. Search with Torrentio, Nyaa, CocoScrapers, Torznab/Prowlarr and more, open season packs and albums, manage your TorBox torrents, usenet and web downloads, plus Cocoleech. Requires your own TorBox account and API key from torbox.app/settings.</description>
+    <disclaimer lang="en_GB">Unofficial add-on. Requires your own TorBox account. You are responsible for the content you access.</disclaimer>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.toolutility" name="Tool Utility Repo" version="1.0.0" provider-name="Anubis101xy">
+  <extension point="xbmc.addon.repository" name="Tool Utility Repo">
+    <dir>
+      <info compressed="false">https://anubis101xy.github.io/tool-utility--repo/zips/addons.xml</info>
+      <checksum>https://anubis101xy.github.io/tool-utility--repo/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://anubis101xy.github.io/tool-utility--repo/zips/</datadir>
+      <hashes>false</hashes>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Tool Utility Repo - TorUtilityBox and friends</summary>
+    <description lang="en_GB">Install and auto-update TorUtilityBox, TorBox and other add-ons by Anubis101xy.</description>
+    <platform>all</platform>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+</addons>
