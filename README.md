@@ -1,6 +1,6 @@
 # Tool Utility Repo
 
-Kodi repository for **TorUtilityBox** and **TorBox**.
+Kodi repository for **TorUtilityBox**, **TorBox** and **StashBox** (a Plex-style library for your NAS).
 
 ## Install in Kodi
 1. Settings > File manager > Add source > `https://anubis101xy.github.io/tool-utility--repo/` (name it `Tool Utility`)
