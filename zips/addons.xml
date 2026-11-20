@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.stashbox" name="StashBox" version="1.5.2" provider-name="Shaun">
+<addon id="plugin.video.stashbox" name="StashBox" version="1.6.0" provider-name="Shaun">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" version="2.22.0"/>
@@ -20,7 +20,8 @@
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
     </assets>
-    <news>1.5.2 - music is only looked for when you ask (Music > Look for music now); shows filed inside another show's folder (Star Trek's spin-offs, Doctor Who's) are found as shows of their own and looked up with the parent's name ('Spin-offs/Voyager' = Star Trek Voyager); 'Pick which folders in here are different shows' - tick each one, the rest stay part of the show, then match any TMDB didn't find straight from the list; 'split it up' keeps the folder's own seasons together.
+    <news>1.6.0 - copies and picture quality: every copy is labelled SD / 720p / 1080p / 4K (from its name, or read from the file's own header); 'Which copy?' when playing (or always the best); films and shows by picture quality; Tools > Copies and picture quality removes same-quality extras or lower-quality copies, keeping the best; a show in several folders shows each copy's quality and whether it's complete - keep the best of each episode or the complete copy; removed copies go to a StashBox Bin on the same drive (undo / put back / empty), or are deleted straight away if you choose.
+1.5.2 - music is only looked for when you ask (Music > Look for music now); shows filed inside another show's folder (Star Trek's spin-offs, Doctor Who's) are found as shows of their own and looked up with the parent's name ('Spin-offs/Voyager' = Star Trek Voyager); 'Pick which folders in here are different shows' - tick each one, the rest stay part of the show, then match any TMDB didn't find straight from the list; 'split it up' keeps the folder's own seasons together.
 1.5.1 - fixes from your report: the missing-episode search no longer claims a different show with the same name (classic Doctor Who), Windows 'Access is denied' when saving moves/undo fixed, whole shows aren't moved into someone else's pack folder; episode files named '103 - Title' / '01 - Title' / 'Episode 01', 19x01, a folder per episode, 'Part 1 of 7' folders, extras; show names like 'Seasons 1 to 26', '(2004-2007) - Complete TV Series', classic vs new shows told apart by season count, IMDb ids in folder names; film names with order numbers, leading years, ' - Fantasy', hyphens, scene-shortened files, CD1/CD2 folders; unmatched titles looked up again once; 'Not matched' lists and match by hand (suggestions, own words, TMDB/IMDb id).
 1.5.0 - folders of several shows no longer read as one show with lots of seasons ('Bluey S01' / 'Peppa Pig Series 2' season folders, franchise folders, years in category names); sort out any folder yourself - split it into separate shows / films, count it as one, or leave it out (Folder rules); detailed scan log saying how every folder was read and why; export a problem report (zip, no passwords or keys).
 1.4.0 - DVD / Blu-ray folder rips (VIDEO_TS / BDMV) named from their folders, incl. TV box sets; one drive can be in Movies and TV; Music: found anywhere on the NAS, tags read, artists / albums / covers, tidy into Artist / Album folders.
