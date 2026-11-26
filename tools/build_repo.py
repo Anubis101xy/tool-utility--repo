@@ -9,6 +9,7 @@ import os
 import re
 import shutil
 import sys
+import time
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -75,10 +76,17 @@ def build_repo_addon():
     aid, ver = root.get("id"), root.get("version")
     tmp = os.path.join(ROOT, "%s-%s.zip" % (aid, ver))
     with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as z:
-        for base, _, files in os.walk(REPO_SRC):
+        # folder entries first ('repository.toolutility/'): Kodi on Android says "invalid structure" without them
+        for base, dirs, files in os.walk(REPO_SRC):
+            dirs.sort()
+            rel = os.path.relpath(base, REPO_SRC)
+            arc = aid + "/" if rel == "." else "%s/%s/" % (aid, rel.replace(os.sep, "/"))
+            info = zipfile.ZipInfo(arc, date_time=time.localtime()[:6])
+            info.external_attr = (0o40755 << 16) | 0x10
+            z.writestr(info, b"")
             for fn in sorted(files):
                 full = os.path.join(base, fn)
-                z.write(full, os.path.join(aid, os.path.relpath(full, REPO_SRC)))
+                z.write(full, (arc + fn))
     for f in os.listdir(ROOT):  # only the current repository zip on the front page
         if f.startswith(aid + "-") and f.endswith(".zip") and f != os.path.basename(tmp):
             os.remove(os.path.join(ROOT, f))
